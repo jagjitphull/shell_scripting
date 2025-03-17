@@ -1,7 +1,10 @@
 #!/bin/bash
 # Move logs to the "backup" folder inside the current directory
 
-mkdir -p backup
-mv logs/*.log backup/
+SOURCE="/home/alchemy/Documents"
+DESTINATION="backup"
 
-echo "Logs moved to the backup folder."
+mkdir -p "$DESTINATION"
+cp -r "$SOURCE" "$DESTINATION"
+
+echo "Files/Documents moved to the backup folder."
